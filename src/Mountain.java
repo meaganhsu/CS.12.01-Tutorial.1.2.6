@@ -33,11 +33,20 @@ public class Mountain {
 
         return -1;
     }
+
     public static boolean isMountain(int[] array) {
         int x = getPeakIndex(array);
 
         if (x == -1) return false;
         if (isIncreasing(array, x) && isDecreasing(array, x)) return true;
         return false;
+    }
+
+    public int[] getArray() {
+        return array;
+    }
+
+    public void setArray(int[] array) {
+        this.array = array;
     }
 }
